@@ -4,11 +4,25 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello
-        run: echo "Hello DevSecOps"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
