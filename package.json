@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Mina labbar för DevSecOps-kursen",
   "main": "index.js",
- "scripts": {
-  "test": "jest"
-},
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JuliaChas/devsecops-labs.git"
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/JuliaChas/devsecops-labs/issues"
   },
-  "homepage": "https://github.com/JuliaChas/devsecops-labs#readme"
+  "homepage": "https://github.com/JuliaChas/devsecops-labs#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
 }
